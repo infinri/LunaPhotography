@@ -138,6 +138,23 @@
                 errorMessage = 'Please enter a valid email address';
             }
         }
+        // Phone validation (basic - allows common formats)
+        else if (type === 'tel' && value) {
+            const phoneRegex = /^[\d\s\-\(\)\+\.]{7,20}$/;
+            if (!phoneRegex.test(value)) {
+                isValid = false;
+                errorMessage = 'Please enter a valid phone number';
+            }
+        }
+        // URL validation
+        else if (type === 'url' && value) {
+            try {
+                new URL(value);
+            } catch {
+                isValid = false;
+                errorMessage = 'Please enter a valid URL (e.g., https://example.com)';
+            }
+        }
 
         if (!isValid) {
             showFieldError(field, errorMessage);

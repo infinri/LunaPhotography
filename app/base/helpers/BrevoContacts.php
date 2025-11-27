@@ -61,12 +61,12 @@ class BrevoContacts
             // Prepare contact attributes
             $attributes = self::prepareAttributes($contactData);
 
-            // Create contact model
+            // Create contact model with new_lead tag
             $contact = new CreateContact([
                 'email' => $contactData['email'],
                 'attributes' => $attributes,
                 'listIds' => [(int)$listId],
-                'updateEnabled' => true // Update if contact already exists
+                'updateEnabled' => true
             ]);
 
             // Create or update contact
@@ -165,10 +165,8 @@ class BrevoContacts
     {
         $attributes = [];
 
-        // Map form fields to Brevo attributes
-        // Brevo requires specific attribute names (can be configured in Brevo dashboard)
+        // FIRSTNAME (split from name)
         if (!empty($data['name'])) {
-            // Try to split name into first and last
             $nameParts = explode(' ', trim($data['name']), 2);
             $attributes['FIRSTNAME'] = $nameParts[0];
             if (isset($nameParts[1])) {
@@ -176,27 +174,140 @@ class BrevoContacts
             }
         }
 
+        // SMS (phone)
         if (!empty($data['phone'])) {
             $attributes['SMS'] = $data['phone'];
         }
 
+        // SERVICE_INTEREST
         if (!empty($data['service_interest'])) {
             $attributes['SERVICE_INTEREST'] = $data['service_interest'];
         }
 
+        // LEAD_NOTES (combined subject + message)
+        $leadNotes = [];
         if (!empty($data['subject'])) {
-            $attributes['SUBJECT'] = $data['subject'];
+            $leadNotes[] = 'Subject: ' . $data['subject'];
+        }
+        if (!empty($data['message'])) {
+            $leadNotes[] = 'Message: ' . $data['message'];
+        }
+        if (!empty($leadNotes)) {
+            // Limit to 1000 chars for Brevo attribute storage
+            $attributes['LEAD_NOTES'] = substr(implode("\n\n", $leadNotes), 0, 1000);
         }
 
-        if (!empty($data['message'])) {
-            // Limit message length for attribute storage
-            $attributes['MESSAGE'] = substr($data['message'], 0, 500);
+        // LEAD_SOURCE (detect from referrer/UTM or use default)
+        $attributes['LEAD_SOURCE'] = self::detectLeadSource();
+
+        // URGENCY (use form value or default to "normal")
+        $attributes['URGENCY'] = !empty($data['urgency']) ? $data['urgency'] : 'normal';
+
+        // Optional fields
+        if (!empty($data['website_url'])) {
+            $attributes['WEBSITE_URL'] = $data['website_url'];
+        }
+
+        if (!empty($data['business_name'])) {
+            $attributes['BUSINESS_NAME'] = $data['business_name'];
         }
 
         // Add submission timestamp
         $attributes['LAST_CONTACT_DATE'] = date('Y-m-d H:i:s');
 
         return $attributes;
+    }
+
+    /**
+     * Detect lead source from referrer, UTM parameters, or session data
+     *
+     * @return string Lead source identifier
+     */
+    private static function detectLeadSource(): string
+    {
+        // 1. Check UTM source parameter (highest priority)
+        $utmSource = $_GET['utm_source'] ?? $_SESSION['utm_source'] ?? null;
+        if (!empty($utmSource)) {
+            return self::normalizeSource($utmSource);
+        }
+
+        // 2. Check HTTP referrer
+        $referrer = $_SERVER['HTTP_REFERER'] ?? null;
+        if (!empty($referrer)) {
+            $source = self::parseReferrerSource($referrer);
+            if ($source) {
+                return $source;
+            }
+        }
+
+        // 3. Default fallback
+        return 'website_direct';
+    }
+
+    /**
+     * Parse referrer URL to determine lead source
+     *
+     * @param string $referrer Full referrer URL
+     * @return string|null Source name or null if same-site/unknown
+     */
+    private static function parseReferrerSource(string $referrer): ?string
+    {
+        $host = parse_url($referrer, PHP_URL_HOST);
+        if (!$host) {
+            return null;
+        }
+
+        $host = strtolower($host);
+
+        // Ignore same-site referrers
+        $ownDomain = $_SERVER['HTTP_HOST'] ?? '';
+        if (str_contains($host, $ownDomain) || str_contains($ownDomain, $host)) {
+            return null;
+        }
+
+        // Map known referrer domains to sources
+        $sourceMap = [
+            // Search engines
+            'google' => 'google_organic',
+            'bing' => 'bing_organic',
+            'duckduckgo' => 'duckduckgo_organic',
+            'yahoo' => 'yahoo_organic',
+            // Social media
+            'facebook' => 'facebook',
+            'instagram' => 'instagram',
+            'linkedin' => 'linkedin',
+            'twitter' => 'twitter',
+            'x.com' => 'twitter',
+            'tiktok' => 'tiktok',
+            'youtube' => 'youtube',
+            'reddit' => 'reddit',
+            // Business directories
+            'yelp' => 'yelp',
+            'nextdoor' => 'nextdoor',
+            'thumbtack' => 'thumbtack',
+            'upwork' => 'upwork',
+            'fiverr' => 'fiverr',
+        ];
+
+        foreach ($sourceMap as $domain => $source) {
+            if (str_contains($host, $domain)) {
+                return $source;
+            }
+        }
+
+        // Unknown external referrer
+        return 'referral_' . preg_replace('/[^a-z0-9]/', '_', $host);
+    }
+
+    /**
+     * Normalize UTM source value
+     *
+     * @param string $source Raw UTM source
+     * @return string Normalized source name
+     */
+    private static function normalizeSource(string $source): string
+    {
+        return strtolower(preg_replace('/[^a-zA-Z0-9_]/', '_', trim($source)));
     }
 
     /**

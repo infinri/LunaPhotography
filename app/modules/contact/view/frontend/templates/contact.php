@@ -131,6 +131,30 @@ use App\Base\Helpers\ReCaptcha;
                         >
                     </div>
                     
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="business_name" class="form-label">Business Name</label>
+                            <input 
+                                type="text" 
+                                id="business_name" 
+                                name="business_name" 
+                                class="form-input"
+                                placeholder="Your company name"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="website_url" class="form-label">Current Website</label>
+                            <input 
+                                type="url" 
+                                id="website_url" 
+                                name="website_url" 
+                                class="form-input"
+                                placeholder="https://yoursite.com"
+                            >
+                        </div>
+                    </div>
+                    
                     <div class="form-group">
                         <label for="service_interest" class="form-label">I'm Interested In *</label>
                         <select 
@@ -162,16 +186,34 @@ use App\Base\Helpers\ReCaptcha;
                         >
                     </div>
                     
-                    <div class="form-group">
-                        <label for="subject" class="form-label">Subject *</label>
-                        <input 
-                            type="text" 
-                            id="subject" 
-                            name="subject" 
-                            class="form-input"
-                            required
-                            placeholder="What's this about?"
-                        >
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                class="form-input"
+                                required
+                                placeholder="What's this about?"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="urgency" class="form-label">Timeline</label>
+                            <select 
+                                id="urgency" 
+                                name="urgency" 
+                                class="form-input"
+                            >
+                                <option value="">-- Select Timeline --</option>
+                                <option value="asap">ASAP / Urgent</option>
+                                <option value="1_2_weeks">1-2 Weeks</option>
+                                <option value="1_month">Within a Month</option>
+                                <option value="flexible">Flexible / No Rush</option>
+                                <option value="just_exploring">Just Exploring</option>
+                            </select>
+                        </div>
                     </div>
                     
                     <div class="form-group">

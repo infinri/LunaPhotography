@@ -248,6 +248,19 @@
     gap: 0.5rem;
 }
 
+/* Two-column form row layout */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .form-label {
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);

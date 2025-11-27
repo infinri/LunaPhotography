@@ -72,10 +72,15 @@ try {
     $validator->required(['name', 'email', 'service_interest', 'phone', 'subject', 'message', 'privacy_consent'])
               ->email('email')
               ->maxLength('name', 100)
-              ->maxLength('service_interest', 100)
+              ->maxLength('email', 255)
               ->maxLength('phone', 20)
+              ->maxLength('service_interest', 100)
               ->maxLength('subject', 200)
-              ->maxLength('message', 2000);
+              ->maxLength('message', 2000)
+              // Optional fields
+              ->maxLength('business_name', 150)
+              ->maxLength('website_url', 255)
+              ->maxLength('urgency', 50);
     
     // Verify privacy consent is checked (value should be 'on' or '1')
     if (empty($_POST['privacy_consent']) || ($_POST['privacy_consent'] !== 'on' && $_POST['privacy_consent'] !== '1')) {
