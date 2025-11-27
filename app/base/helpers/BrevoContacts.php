@@ -167,13 +167,13 @@ class BrevoContacts
     {
         $attributes = [];
 
-        // FIRSTNAME (split from name)
+        // FIRSTNAME / LASTNAME (split from name, default lastname to 'Unknown' if not provided)
         if (!empty($data['name'])) {
             $nameParts = explode(' ', trim($data['name']), 2);
             $attributes['FIRSTNAME'] = $nameParts[0];
-            if (isset($nameParts[1])) {
-                $attributes['LASTNAME'] = $nameParts[1];
-            }
+            $attributes['LASTNAME'] = isset($nameParts[1]) && trim($nameParts[1]) !== '' 
+                ? $nameParts[1] 
+                : 'Unknown';
         }
 
         // SMS (phone) - format for Brevo E.164 format
