@@ -194,7 +194,7 @@ class BrevoContacts
         if (!empty($data['subject'])) {
             $leadNotes[] = 'Subject: ' . $data['subject'];
         }
-        if (!empty($data['message'])) {
+        if (isset($data['message']) && trim($data['message']) !== '') {
             $leadNotes[] = 'Message: ' . $data['message'];
         }
         if (!empty($leadNotes)) {

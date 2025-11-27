@@ -99,8 +99,12 @@ try {
     
     Logger::info('Contact form validation passed');
     
-    // 5. Get Validated & Sanitized Data
-    $data = $validator->validated();
+    // DEBUG: Log raw and validated data
+    Logger::debug('FORM DATA RAW', $_POST);
+    Logger::debug('FORM DATA VALIDATED', $validator->validated());
+    
+    // 5. Get Validated & Sanitized Data (merge with POST for optional fields)
+    $data = array_merge($_POST, $validator->validated());
     
     // 6. Create contact in Brevo (triggers automation workflows)
     try {
