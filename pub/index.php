@@ -101,8 +101,6 @@ $router = new Router();
 $router->get('/', 'home')
        ->get('/about', 'about')
        ->get('/contact', 'contact')
-       ->post('/contact', 'contact')
-       ->get('/terms', 'legal')
        ->get('/privacy', 'legal');
 
 // Dispatch

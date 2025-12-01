@@ -1,14 +1,14 @@
-# Professional Website Template
+# Basic Website Template
 
-**Standard Website Template with Enterprise-Grade Features**
+**Simple 3-Page Starter Template with Professional Features**
 
-A professional, production-ready website template built with clean architecture principles. Includes features typically found in $100+ templates:
+A clean, production-ready website template built with modern architecture principles. Perfect for small businesses that need a fast, reliable web presence:
 
-- **Professional Email Delivery** - Brevo API integration (no broken PHP mail)
-- **Anti-Spam Protection** - reCAPTCHA v3 + rate limiting + honeypot
+- **3 Pages** - Home, About, Contact (+ Privacy Policy)
 - **Performance Optimized** - Caching, asset optimization, minimal footprint
-- **Production Security** - CSRF protection, secure sessions, CSP headers
-- **Enterprise Logging** - Debug customer issues easily
+- **Production Security** - CSRF protection, secure sessions, CSP headers, rate limiting
+- **Developer-Friendly** - Console commands, logging, debugging tools
+- **Mobile-Responsive** - Works perfectly on all devices
 
 **Note:** All content (Infinri text/images) serves as placeholder examples. Replace with your business information.
 
@@ -28,28 +28,16 @@ A professional, production-ready website template built with clean architecture 
 
 ## Security
 
-**Contact Form Protection**
-- CSRF token verification on all submissions
-- Rate limiting (5 attempts per 5 minutes per IP)
-- Honeypot anti-spam field
-- Input validation and sanitization
-- XSS prevention with output encoding
-
 **Application Security**
+- CSRF token verification
+- Rate limiting (prevents abuse)
 - Secure session management
 - Environment-based configuration
 - Error handling without information leakage
 - HTTPS enforcement in production
+- XSS prevention with output encoding
 
-## Email System
-
-**Brevo API Integration**
-- Professional email delivery via Brevo API (no SMTP port issues)
-- Automatic contact creation in Brevo CRM
-- Configured via environment variables
-- Form data sent directly to your email
-- Reply-to header for direct customer responses
-- Works on all hosting environments (even when port 587 is blocked)
+**Note:** Contact page displays contact information only (no form submission in Basic template)
 
 ## Performance
 
@@ -119,8 +107,8 @@ app/
 │   ├── footer/     Site footer
 │   ├── home/       Landing page (placeholder content)
 │   ├── about/      About section (placeholder content)
-│   ├── contact/    Contact form with Brevo email integration
-│   ├── legal/      Privacy Policy & Terms pages
+│   ├── contact/    Contact information display (no form)
+│   ├── legal/      Privacy Policy page
 │   └── error/      Error pages (400, 404, 500, maintenance)
 bin/                Console entry point
 pub/                Web root
@@ -134,8 +122,8 @@ var/                Runtime data (logs, cache, sessions)
 
 **Backend**
 - PHP 8.4 with strict types
-- Brevo API for email delivery (HTTPS, no SMTP port 587)
 - Composer for dependency management
+- No external API dependencies
 
 **Frontend**
 - Vanilla JavaScript (ES6+)
@@ -162,23 +150,25 @@ var/                Runtime data (logs, cache, sessions)
 **Environment Setup**
 
 Copy `.env.example` to `.env` and configure:
-- Brevo API credentials for email delivery
 - Application environment (development/production)
+- Site name and URL
 - Security settings (CSRF, HTTPS)
 
 **Customization**
 
-1. Replace placeholder content in Home, About, Header, Footer with your business info
-2. Update `.env` with your Brevo API credentials
+1. Replace placeholder content in Home, About, Contact, Header, Footer with your business info
+2. Update `.env` with your site name and URL
 3. Customize colors in `app/base/view/base/css/variables.css`
 4. Add your logo and images
+5. Update contact information (email, phone, address) in Contact page
 
-**Standard Website Includes:**
-- Up to 5 content pages (Home, About, Contact + 2 custom pages)
-- 2 legal pages (Privacy Policy, Terms & Conditions)
-- Professional contact form with email delivery
+**Basic Template Includes:**
+- 3 content pages (Home, About, Contact)
+- 1 legal page (Privacy Policy)
+- Contact information display
 - Mobile-responsive design
 - SEO-optimized structure
+- Performance optimization (caching, rate limiting)
 
 ## Contact
 

@@ -3,12 +3,9 @@ declare(strict_types=1);
 /**
  * Contact Template
  *
- * Pure HTML template for contact page
+ * Simple contact information display - no form submission
  * Meta and assets loaded in index.php
  */
-
-use App\Helpers\{Session, Esc};
-use App\Base\Helpers\ReCaptcha;
 ?>
 
 <!-- Contact Hero -->
@@ -16,7 +13,7 @@ use App\Base\Helpers\ReCaptcha;
     <div class="container">
         <h1 class="page-title contact-title">Contact Us</h1>
         <p class="page-subtitle contact-subtitle">
-            We'd love to hear from you. Get in touch with us using the form below or through any of our contact methods.
+            We'd love to hear from you. Get in touch with us using any of the contact methods below.
         </p>
     </div>
 </section>
@@ -78,99 +75,6 @@ use App\Base\Helpers\ReCaptcha;
                 </div>
             </div>
             </div>
-            
-            <!-- Contact Form -->
-            <div class="contact-form-wrapper">
-                <h2 class="form-title">Send a Message</h2>
-                <p class="form-description">
-                    Have a question or want to work together? Fill out the form below and we'll get back to you as soon as possible.
-                </p>
-                
-                <form method="POST" action="/contact" class="contact-form" id="contactForm">
-                    <input type="hidden" name="csrf_token" value="<?php echo Esc::html($csrf ?? Session::csrf()); ?>">
-                    <input type="hidden" name="recaptcha_token" id="recaptchaToken" data-sitekey="<?php echo Esc::html(ReCaptcha::getSiteKey()); ?>">
-                    
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name *</label>
-                        <input 
-                            type="text" 
-                            id="name" 
-                            name="name" 
-                            class="form-input"
-                            required
-                            placeholder="Your name"
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email *</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            class="form-input"
-                            required
-                            placeholder="your.email@example.com"
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone" class="form-label">Phone *</label>
-                        <input 
-                            type="tel" 
-                            id="phone" 
-                            name="phone" 
-                            class="form-input"
-                            required
-                            placeholder="(555) 123-4567"
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message *</label>
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            class="form-textarea"
-                            required
-                            placeholder="Tell me about your project..."
-                            rows="6"
-                        ></textarea>
-                    </div>
-                    
-                    <!-- Company verification field -->
-                    <div class="company-info" aria-hidden="true">
-                        <input type="text" name="company_url" id="comp_url_verify" value="" tabindex="-1" autocomplete="new-password" aria-hidden="true">
-                    </div>
-                    
-                    <!-- Privacy & Consent -->
-                    <div class="form-group form-consent">
-                        <label class="consent-wrapper">
-                            <input 
-                                type="checkbox" 
-                                id="privacy_consent" 
-                                name="privacy_consent" 
-                                class="consent-checkbox"
-                                required
-                            >
-                            <span class="consent-text">
-                                * I agree to the <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> and consent to Infinri collecting and storing my information for the purpose of responding to this inquiry.
-                            </span>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-lg form-submit">
-                        <span>Send Message</span>
-                        <span class="btn-icon">→</span>
-                    </button>
-                    
-                    <p class="form-note">
-                        * Required fields
-                    </p>
-                </form>
-            </div>
         </div>
     </div>
 </section>
-
-<!-- reCAPTCHA is lazy-loaded by contact-lazy.js on user interaction -->

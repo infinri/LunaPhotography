@@ -93,56 +93,6 @@
     box-shadow: var(--shadow-md);
 }
 
-/* ==================== Clients Section ==================== */
-
-.clients-section {
-    padding: 4rem 0;
-    width: 100%;
-    background: var(--color-bg-secondary);
-}
-
-
-.client-types {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-@media (min-width: 640px) {
-    .client-types {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .client-types {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.client-type {
-    text-align: center;
-    padding: 1.5rem;
-}
-
-.client-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.client-type h3 {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-}
-
-.client-type p {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-}
-
 /* ==================== CTA Section ==================== */
 
 .cta-section {

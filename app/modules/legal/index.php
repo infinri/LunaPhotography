@@ -3,35 +3,33 @@ declare(strict_types=1);
 /**
  * Legal Module Controller
  * 
- * Handles all legal documentation pages:
- * /terms, /privacy
+ * Handles legal documentation page:
+ * /privacy
  */
 
 use App\Base\Helpers\Assets;
 use App\Helpers\Env;
 
 // Determine which legal document to show from URL
-$requestUri = $_SERVER['REQUEST_URI'] ?? '/terms';
+$requestUri = $_SERVER['REQUEST_URI'] ?? '/privacy';
 $path = parse_url($requestUri, PHP_URL_PATH);
 $page = basename($path);
 
 // Map routes to template files
 $legalPages = [
-    'terms' => 'Terms & Conditions',
     'privacy' => 'Privacy Policy'
 ];
 
 // Validate page exists
 if (!array_key_exists($page, $legalPages)) {
     http_response_code(404);
-    $page = 'terms'; // fallback
+    $page = 'privacy'; // fallback
 }
 
 $pageTitle = $legalPages[$page];
 
 // Set last updated dates per document
 $lastUpdatedDates = [
-    'terms' => 'November 21, 2025',
     'privacy' => 'November 21, 2025'
 ];
 $lastUpdated = $lastUpdatedDates[$page] ?? date('F j, Y');

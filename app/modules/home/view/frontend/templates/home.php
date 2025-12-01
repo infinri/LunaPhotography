@@ -21,47 +21,6 @@ declare(strict_types=1);
     </div>
 </section>
 
-<section class="clients-section">
-    <div class="container">
-        <h2 class="section-title">Built for Real Businesses</h2>
-        <p class="section-subtitle">I work with the people who make their communities better</p>
-        
-        <div class="client-types">
-            <div class="client-type">
-                <svg class="client-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
-                </svg>
-                <h3>Local Shops</h3>
-                <p>Bakeries, coffee shops, boutiques</p>
-            </div>
-            <div class="client-type">
-                <svg class="client-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                </svg>
-                <h3>Startups</h3>
-                <p>Early-stage companies that need to move fast</p>
-            </div>
-            <div class="client-type">
-                <svg class="client-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
-                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-                    <line x1="12" y1="19" x2="12" y2="22"/>
-                </svg>
-                <h3>Service Providers</h3>
-                <p>Photographers, coaches, consultants, freelancers</p>
-            </div>
-            <div class="client-type">
-                <svg class="client-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                </svg>
-                <h3>Local Contractors</h3>
-                <p>Plumbers, electricians, landscapers, cleaners</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="why-choose-section">
     <div class="container">
         <h2 class="section-title">Why Small Businesses Choose Infinri</h2>

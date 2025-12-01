@@ -38,8 +38,6 @@ declare(strict_types=1);
                 <p class="footer-copyright">&copy; <?php echo date('Y'); ?> Your Company Name. All Rights Reserved.</p>
                 <nav class="footer-legal-links">
                     <a href="/privacy">Privacy Policy</a>
-                    <span class="separator">·</span>
-                    <a href="/terms">Terms & Conditions</a>
                 </nav>
             </div>
             <p class="footer-credit">Powered by <a href="https://infinri.com" target="_blank" rel="noopener">Infinri</a></p>
