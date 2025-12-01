@@ -1,8 +1,16 @@
-# Infinri
+# Professional Website Template
 
-**Website development, hosting, and maintenance platform for small businesses.**
+**Standard Website Template with Enterprise-Grade Features**
 
-A modular PHP web application built with clean architecture principles. Designed for maintainability, security, and performance. Transparent pricing starting at $10 - from quick templates to monthly support plans.
+A professional, production-ready website template built with clean architecture principles. Includes features typically found in $100+ templates:
+
+- **Professional Email Delivery** - Brevo API integration (no broken PHP mail)
+- **Anti-Spam Protection** - reCAPTCHA v3 + rate limiting + honeypot
+- **Performance Optimized** - Caching, asset optimization, minimal footprint
+- **Production Security** - CSRF protection, secure sessions, CSP headers
+- **Enterprise Logging** - Debug customer issues easily
+
+**Note:** All content (Infinri text/images) serves as placeholder examples. Replace with your business information.
 
 ## Architecture
 
@@ -35,13 +43,13 @@ A modular PHP web application built with clean architecture principles. Designed
 
 ## Email System
 
-**SMTP Integration**
-- PHPMailer for reliable email delivery
-- SMTP configuration via environment variables
-- Professional HTML email templates
+**Brevo API Integration**
+- Professional email delivery via Brevo API (no SMTP port issues)
+- Automatic contact creation in Brevo CRM
+- Configured via environment variables
+- Form data sent directly to your email
 - Reply-to header for direct customer responses
-- Automatic space removal in SMTP passwords
-- Plain text fallback support
+- Works on all hosting environments (even when port 587 is blocked)
 
 ## Performance
 
@@ -109,14 +117,12 @@ app/
 ├── modules/        Feature modules
 │   ├── head/       Navigation and header
 │   ├── footer/     Site footer
-│   ├── home/       Landing page
-│   ├── about/      About section
-│   ├── services/   Services showcase
-│   ├── contact/    Contact form with SMTP email
+│   ├── home/       Landing page (placeholder content)
+│   ├── about/      About section (placeholder content)
+│   ├── contact/    Contact form with Brevo email integration
+│   ├── legal/      Privacy Policy & Terms pages
 │   └── error/      Error pages (400, 404, 500, maintenance)
 bin/                Console entry point
-config/             Configuration files
-├── services.php    Contact form service dropdown options
 pub/                Web root
 ├── assets/         Published assets
 └── index.php       Application entry point
@@ -160,15 +166,19 @@ Copy `.env.example` to `.env` and configure:
 - Application environment (development/production)
 - Security settings (CSRF, HTTPS)
 
-**Customize Contact Form Services**
+**Customization**
 
-Edit `config/services.php` to change dropdown options:
-```php
-return [
-    'general' => 'General Inquiry',
-    'your-service' => 'Your Service Name',
-];
-```
+1. Replace placeholder content in Home, About, Header, Footer with your business info
+2. Update `.env` with your Brevo API credentials
+3. Customize colors in `app/base/view/base/css/variables.css`
+4. Add your logo and images
+
+**Standard Website Includes:**
+- Up to 5 content pages (Home, About, Contact + 2 custom pages)
+- 2 legal pages (Privacy Policy, Terms & Conditions)
+- Professional contact form with email delivery
+- Mobile-responsive design
+- SEO-optimized structure
 
 ## Contact
 

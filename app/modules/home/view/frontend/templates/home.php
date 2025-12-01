@@ -14,90 +14,9 @@ declare(strict_types=1);
             <h1 class="hero-title">Affordable Websites for Real Businesses Starting at $10</h1>
             <p class="hero-subtitle">Fast delivery, transparent pricing, no contracts, no tech jargon. Built for small businesses that need results without spending hundreds.</p>
             <div class="hero-buttons">
-                <a href="/services" class="btn btn-white">View All Services</a>
-                <a href="/contact" class="btn btn-outline-white">Get Started</a>
+                <a href="/contact" class="btn btn-white">Get Started</a>
+                <a href="/about" class="btn btn-outline-white">Learn More</a>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="services-section" id="services">
-    <div class="container">
-        <h2 class="section-title">How Infinri Helps Your Business</h2>
-        <p class="section-subtitle">Four ways to get exactly what you need</p>
-        
-        <div class="services-overview-grid">
-            <!-- Monthly Plans -->
-            <div class="service-overview-card featured">
-                <div class="service-badge">Most Popular</div>
-                <svg class="service-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                </svg>
-                <h3 class="service-title">Monthly Plans</h3>
-                <p class="service-price">From $10/month</p>
-                <p class="service-description">Ongoing support with predictable pricing. Be My Developer or Be My IT Guy your choice.</p>
-                <div class="service-highlights">
-                    <span class="highlight">Up to 5 requests</span>
-                    <span class="highlight">24h support</span>
-                    <span class="highlight">No contracts</span>
-                </div>
-            </div>
-            
-            <!-- Website Packages -->
-            <div class="service-overview-card">
-                <svg class="service-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <line x1="2" y1="12" x2="22" y2="12"/>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                </svg>
-                <h3 class="service-title">Website Packages</h3>
-                <p class="service-price">$10 - $50</p>
-                <p class="service-description">Fast, affordable websites using proven templates. Perfect for new businesses, side-hustles, or anyone who wants to get online fast without spending hundreds.</p>
-                <div class="service-highlights">
-                    <span class="highlight">Fast delivery</span>
-                    <span class="highlight">Mobile-ready</span>
-                    <span class="highlight">SEO optimized</span>
-                </div>
-            </div>
-            
-            <!-- One-Time Services -->
-            <div class="service-overview-card">
-                <svg class="service-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                </svg>
-                <h3 class="service-title">One-Time Services</h3>
-                <p class="service-price">$20 - $75</p>
-                <p class="service-description">Quick fixes, improvements, or professional audits. Get exactly what you need, when you need it.</p>
-                <div class="service-highlights">
-                    <span class="highlight">Audits</span>
-                    <span class="highlight">Fixes</span>
-                    <span class="highlight">Improvements</span>
-                </div>
-            </div>
-            
-            <!-- Add-Ons -->
-            <div class="service-overview-card">
-                <svg class="service-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="1"/>
-                    <circle cx="19" cy="12" r="1"/>
-                    <circle cx="5" cy="12" r="1"/>
-                    <circle cx="12" cy="5" r="1"/>
-                    <circle cx="12" cy="19" r="1"/>
-                </svg>
-                <h3 class="service-title">Add-Ons</h3>
-                <p class="service-price">$5 - $15</p>
-                <p class="service-description">Enhance any package or service. Forms, features, content, setup all the extras you might need.</p>
-                <div class="service-highlights">
-                    <span class="highlight">9 options</span>
-                    <span class="highlight">Mix & match</span>
-                    <span class="highlight">Affordable</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="services-cta-banner">
-            <p>Want to see detailed pricing, features, and what's included?</p>
-            <a href="/services" class="btn btn-primary btn-lg">View Full Services Menu →</a>
         </div>
     </div>
 </section>

@@ -161,11 +161,11 @@ declare(strict_types=1);
             <h2>Let's Build Something Together</h2>
             <p>
                 Ready to work with a developer who actually answers emails and delivers on time? 
-                Check out the services menu or reach out directly I'll respond within 24 hours.
+                Reach out directly and I'll respond within 24 hours.
             </p>
             <div class="cta-buttons">
-                <a href="/services" class="btn btn-primary">View Services & Pricing</a>
-                <a href="/contact" class="btn btn-outline">Contact Me</a>
+                <a href="/contact" class="btn btn-primary">Get Started</a>
+                <a href="/" class="btn btn-outline">Learn More</a>
             </div>
         </div>
     </div>

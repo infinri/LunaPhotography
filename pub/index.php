@@ -100,14 +100,10 @@ $router = new Router();
 
 $router->get('/', 'home')
        ->get('/about', 'about')
-       ->get('/services', 'services')
        ->get('/contact', 'contact')
        ->post('/contact', 'contact')
        ->get('/terms', 'legal')
-       ->get('/privacy', 'legal')
-       ->get('/cookies', 'legal')
-       ->get('/disclaimer', 'legal')
-       ->get('/refund', 'legal');
+       ->get('/privacy', 'legal');
 
 // Dispatch
 $router->dispatch('error');

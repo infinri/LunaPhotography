@@ -4,7 +4,7 @@ declare(strict_types=1);
  * Legal Module Controller
  * 
  * Handles all legal documentation pages:
- * /terms, /privacy, /cookies, /disclaimer, /refund
+ * /terms, /privacy
  */
 
 use App\Base\Helpers\Assets;
@@ -18,10 +18,7 @@ $page = basename($path);
 // Map routes to template files
 $legalPages = [
     'terms' => 'Terms & Conditions',
-    'privacy' => 'Privacy Policy',
-    'cookies' => 'Cookie Policy',
-    'disclaimer' => 'Disclaimer',
-    'refund' => 'Refund & Cancellation Policy'
+    'privacy' => 'Privacy Policy'
 ];
 
 // Validate page exists
@@ -35,10 +32,7 @@ $pageTitle = $legalPages[$page];
 // Set last updated dates per document
 $lastUpdatedDates = [
     'terms' => 'November 21, 2025',
-    'privacy' => 'November 21, 2025',
-    'cookies' => 'November 21, 2025',
-    'disclaimer' => 'November 21, 2025',
-    'refund' => 'November 21, 2025'
+    'privacy' => 'November 21, 2025'
 ];
 $lastUpdated = $lastUpdatedDates[$page] ?? date('F j, Y');
 

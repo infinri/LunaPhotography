@@ -14,12 +14,9 @@ use App\Base\Helpers\ReCaptcha;
 <!-- Contact Hero -->
 <section class="page-hero contact-hero">
     <div class="container">
-        <h1 class="page-title contact-title">Get In Touch</h1>
+        <h1 class="page-title contact-title">Contact Us</h1>
         <p class="page-subtitle contact-subtitle">
-            Fast, friendly website help for real small businesses. Whether you need a new site, a quick fix, or monthly support I'm here to help.
-        </p>
-        <p class="page-subtitle contact-subtitle">
-            <strong>Not sure what you need?</strong> No problem. Just describe your situation in simple words and I'll guide you.
+            We'd love to hear from you. Get in touch with us using the form below or through any of our contact methods.
         </p>
     </div>
 </section>
@@ -40,8 +37,31 @@ use App\Base\Helpers\ReCaptcha;
                     </svg>
                     <div class="info-content">
                         <h3 class="info-title">Email</h3>
-                        <p class="info-text">lucio.saldivar@infinri.com</p>
-                        <p class="info-subtitle">Best for detailed questions</p>
+                        <p class="info-text">contact@yourcompany.com</p>
+                        <p class="info-subtitle">We'll reply promptly</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <svg class="info-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <div class="info-content">
+                        <h3 class="info-title">Phone</h3>
+                        <p class="info-text">(555) 123-4567</p>
+                        <p class="info-subtitle">Mon-Fri, 9am-5pm</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <svg class="info-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <div class="info-content">
+                        <h3 class="info-title">Location</h3>
+                        <p class="info-text">Your City, State</p>
+                        <p class="info-subtitle">Your Address Here</p>
                     </div>
                 </div>
                 
@@ -51,34 +71,9 @@ use App\Base\Helpers\ReCaptcha;
                         <polyline points="12 6 12 12 16 14"/>
                     </svg>
                     <div class="info-content">
-                        <h3 class="info-title">Response Time</h3>
-                        <p class="info-text">Within 24 hours</p>
-                        <p class="info-subtitle">Guaranteed reply</p>
-                    </div>
-                </div>
-                
-                <div class="info-card">
-                    <svg class="info-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="2" y1="12" x2="22" y2="12"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                    <div class="info-content">
-                        <h3 class="info-title">Location</h3>
-                        <p class="info-text">United States</p>
-                        <p class="info-subtitle">Serving small businesses across the US</p>
-                    </div>
-                </div>
-                
-                <div class="info-card">
-                    <svg class="info-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                    </svg>
-                    <div class="info-content">
-                        <h3 class="info-title">Availability</h3>
-                        <p class="info-text">Taking new clients</p>
-                        <p class="info-subtitle">This month</p>
+                        <h3 class="info-title">Business Hours</h3>
+                        <p class="info-text">Mon-Fri: 9am-5pm</p>
+                        <p class="info-subtitle">Weekends: Closed</p>
                     </div>
                 </div>
             </div>
@@ -88,21 +83,8 @@ use App\Base\Helpers\ReCaptcha;
             <div class="contact-form-wrapper">
                 <h2 class="form-title">Send a Message</h2>
                 <p class="form-description">
-                    Tell me what you need even if you're not sure how to describe it. I'll ask clear follow-up questions and guide you through everything step-by-step.
+                    Have a question or want to work together? Fill out the form below and we'll get back to you as soon as possible.
                 </p>
-                <div class="common-requests">
-                    <p><strong>Common things people contact me for:</strong></p>
-                    <ul>
-                        <li>"My site is broken"</li>
-                        <li>"I need a quick update"</li>
-                        <li>"I need a simple website"</li>
-                        <li>"I want monthly help"</li>
-                        <li>"My forms aren't working"</li>
-                        <li>"I need hosting or setup"</li>
-                        <li>"My last developer disappeared"</li>
-                    </ul>
-                    <p class="trust-line"><strong>I reply to every message personally no bots, no outsourcing.</strong></p>
-                </div>
                 
                 <form method="POST" action="/contact" class="contact-form" id="contactForm">
                     <input type="hidden" name="csrf_token" value="<?php echo Esc::html($csrf ?? Session::csrf()); ?>">
@@ -132,49 +114,6 @@ use App\Base\Helpers\ReCaptcha;
                         >
                     </div>
                     
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="business_name" class="form-label">Business Name</label>
-                            <input 
-                                type="text" 
-                                id="business_name" 
-                                name="business_name" 
-                                class="form-input"
-                                placeholder="Your company name"
-                            >
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="website_url" class="form-label">Current Website</label>
-                            <input 
-                                type="text" 
-                                id="website_url" 
-                                name="website_url" 
-                                class="form-input"
-                                placeholder="yoursite.com"
-                            >
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service_interest" class="form-label">I'm Interested In *</label>
-                        <select 
-                            id="service_interest" 
-                            name="service_interest" 
-                            class="form-input"
-                            required
-                        >
-                            <option value="">-- Select a Service --</option>
-                            <?php
-                            $services = require __DIR__ . '/../../../../../../config/services.php';
-                            foreach ($services as $value => $label): ?>
-                                <option value="<?php echo Esc::html($value); ?>">
-                                    <?php echo Esc::html($label); ?>
-                                </option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    
                     <div class="form-group">
                         <label for="phone" class="form-label">Phone *</label>
                         <input 
@@ -185,36 +124,6 @@ use App\Base\Helpers\ReCaptcha;
                             required
                             placeholder="(555) 123-4567"
                         >
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject *</label>
-                            <input 
-                                type="text" 
-                                id="subject" 
-                                name="subject" 
-                                class="form-input"
-                                required
-                                placeholder="What's this about?"
-                            >
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="urgency" class="form-label">Timeline</label>
-                            <select 
-                                id="urgency" 
-                                name="urgency" 
-                                class="form-input"
-                            >
-                                <option value="">-- Select Timeline --</option>
-                                <option value="asap">ASAP / Urgent</option>
-                                <option value="1_2_weeks">1-2 Weeks</option>
-                                <option value="1_month">Within a Month</option>
-                                <option value="flexible">Flexible / No Rush</option>
-                                <option value="just_exploring">Just Exploring</option>
-                            </select>
-                        </div>
                     </div>
                     
                     <div class="form-group">
