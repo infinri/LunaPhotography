@@ -23,19 +23,23 @@ if (!in_array($errorType, $allowedTypes, true)) {
 $metaConfig = [
     '400' => [
         'title' => '400 - Bad Request',
-        'description' => 'Your browser sent a request that this server could not understand'
+        'description' => 'Your browser sent a request that this server could not understand',
+        'robots' => 'noindex, nofollow'
     ],
     '404' => [
         'title' => '404 - Page Not Found',
-        'description' => 'The page you are looking for could not be found'
+        'description' => 'The page you are looking for could not be found',
+        'robots' => 'noindex, nofollow'
     ],
     '500' => [
         'title' => '500 - Internal Server Error',
-        'description' => 'Something went wrong on our end'
+        'description' => 'Something went wrong on our end',
+        'robots' => 'noindex, nofollow'
     ],
     'maintenance' => [
         'title' => 'Maintenance Mode',
-        'description' => 'We are currently performing scheduled maintenance'
+        'description' => 'We are currently performing scheduled maintenance',
+        'robots' => 'noindex, nofollow'
     ]
 ];
 

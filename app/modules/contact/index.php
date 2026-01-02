@@ -13,7 +13,6 @@ use App\Helpers\Env;
 Meta::setMultiple([
     'title' => 'Contact Us | Get in Touch',
     'description' => 'Get in touch with us. Find our contact information including email, phone, location, and business hours.',
-    'keywords' => 'contact, get in touch, contact information, business hours, location',
     'og:title' => 'Contact Us | Get in Touch',
     'og:description' => 'Get in touch with us. Find our contact information including email, phone, location, and business hours.',
     'twitter:title' => 'Contact Us | Get in Touch'

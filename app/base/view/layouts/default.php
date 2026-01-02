@@ -50,6 +50,9 @@ use App\Helpers\{Env, Theme};
     
     // External scripts (e.g., reCAPTCHA when needed)
     echo Assets::renderHeadScripts();
+    
+    // JSON-LD structured data (SEO)
+    echo Meta::renderJsonLd();
     ?>
 </head>
 <body>

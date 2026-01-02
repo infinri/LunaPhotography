@@ -1,4 +1,4 @@
-﻿/**
+/**
  * About Page Styles
  * Critical: page title styles first for LCP optimization
  */
@@ -251,7 +251,7 @@
 .differentiator-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
-    border-color: rgba(157, 78, 221, 0.3);
+    border-color: rgba(var(--color-primary-rgb), 0.3);
 }
 
 .differentiator-number {

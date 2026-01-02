@@ -27,8 +27,9 @@
     
     /* Layout */
     --container-max: 1200px;
-    --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 1px rgba(157, 78, 221, 0.15);
-    --glow-purple: 0 0 20px rgba(157, 78, 221, 0.4);
+    --color-primary-rgb: 157, 78, 221;
+    --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 1px rgba(var(--color-primary-rgb), 0.15);
+    --glow-primary: 0 0 20px rgba(var(--color-primary-rgb), 0.4);
 }
 
 /* ==================== Critical Reset ==================== */
@@ -57,12 +58,12 @@ body {
 
 /* ==================== Header (Above-the-fold) ==================== */
 .header {
-    background: #0a0a0a;
+    background: var(--color-bg-primary);
     box-shadow: var(--shadow-elevated);
     position: sticky;
     top: 0;
     z-index: 1020;
-    border-bottom: 1px solid rgba(157, 78, 221, 0.2);
+    border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.2);
     height: 125px;
 }
 
@@ -85,7 +86,7 @@ body {
     height: 150px;
     width: 267px;
     display: block;
-    filter: drop-shadow(var(--glow-purple));
+    filter: drop-shadow(var(--glow-primary));
 }
 
 .nav-menu {

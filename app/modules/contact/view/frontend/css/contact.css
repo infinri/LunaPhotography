@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Contact Page Styles
  * Critical: page title styles first for LCP optimization
  */
@@ -138,9 +138,9 @@
 }
 
 .info-card:hover {
-    border-color: rgba(157, 78, 221, 0.5);
+    border-color: rgba(var(--color-primary-rgb), 0.5);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(157, 78, 221, 0.15);
+    box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.15);
 }
 
 @media (min-width: 1024px) {
@@ -160,7 +160,7 @@
     .info-card:hover {
         transform: none;
         box-shadow: none;
-        border-bottom-color: rgba(157, 78, 221, 0.3);
+        border-bottom-color: rgba(var(--color-primary-rgb), 0.3);
     }
     
     .info-card:last-child {

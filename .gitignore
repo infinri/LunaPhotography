@@ -76,8 +76,9 @@ pnpm-lock.yaml
 # Server Config
 .htaccess
 
-# Generated Documentation
+# Generated Files
 /docs/build/
+pub/sitemap.xml
 TODO.md
 NOTES.md
 PRIVATE*.md

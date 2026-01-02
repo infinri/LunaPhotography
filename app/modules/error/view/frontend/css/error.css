@@ -161,7 +161,7 @@
 .error-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
-    border-color: rgba(157, 78, 221, 0.4);
+    border-color: rgba(var(--color-primary-rgb), 0.4);
 }
 
 .error-card-icon {

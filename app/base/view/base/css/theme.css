@@ -13,6 +13,8 @@
     --color-primary: #9d4edd;           /* Main purple */
     --color-primary-light: #c77dff;     /* Lighter purple (hover) */
     --color-primary-dark: #7b2cbf;      /* Darker purple (active) */
+    --color-primary-darker: #6a1fa0;    /* Even darker (hover on dark buttons) */
+    --color-primary-rgb: 157, 78, 221;  /* RGB components for rgba() usage */
 
     /* ==================== SECONDARY BRAND COLOR ==================== */
     /* Used for: Alternative accents, secondary elements */

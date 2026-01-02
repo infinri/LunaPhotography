@@ -3,12 +3,12 @@
  */
 
 .header {
-    background: #0a0a0a;
+    background: var(--color-bg-primary);
     box-shadow: var(--shadow-elevated);
     position: sticky;
     top: 0;
     z-index: 1020;
-    border-bottom: 1px solid rgba(157, 78, 221, 0.2);
+    border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.2);
     height: 125px;
 }
 
@@ -32,12 +32,12 @@
     height: 150px;
     width: 267px;
     display: block;
-    filter: drop-shadow(var(--glow-purple));
+    filter: drop-shadow(var(--glow-primary));
     transition: filter var(--transition-base);
 }
 
 .logo:hover .logo-image {
-    filter: drop-shadow(var(--glow-purple)) brightness(1.1);
+    filter: drop-shadow(var(--glow-primary)) brightness(1.1);
 }
 
 /* Navigation Menu Wrapper - Mobile First */
@@ -131,7 +131,7 @@
 }
 
 .menu-toggle:hover {
-    background: rgba(157, 78, 221, 0.1);
+    background: rgba(var(--color-primary-rgb), 0.1);
 }
 
 .hamburger {
@@ -165,12 +165,12 @@
     
     .nav-menu {
         background: var(--color-bg-elevated);
-        border: 1px solid rgba(157, 78, 221, 0.3);
+        border: 1px solid rgba(var(--color-primary-rgb), 0.3);
         border-radius: var(--radius-lg);
         padding: 1.25rem;
         padding-top: 3rem;
         min-width: 220px;
-        box-shadow: var(--shadow-xl), 0 0 20px rgba(157, 78, 221, 0.2);
+        box-shadow: var(--shadow-xl), 0 0 20px rgba(var(--color-primary-rgb), 0.2);
         transition: right 250ms ease, opacity 250ms ease;
     }
     
@@ -209,7 +209,7 @@
     }
     
     .menu-close:hover {
-        background: rgba(157, 78, 221, 0.2);
+        background: rgba(var(--color-primary-rgb), 0.2);
         color: var(--color-primary-light);
         transform: rotate(90deg);
     }

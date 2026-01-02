@@ -69,11 +69,11 @@
     --shadow-xl: 0 20px 40px 0 rgba(0, 0, 0, 0.9);
     --shadow-2xl: 0 30px 60px 0 rgba(0, 0, 0, 0.95);
     
-    /* Premium purple glows */
-    --glow-purple: 0 0 20px rgba(157, 78, 221, 0.4);
-    --glow-purple-lg: 0 0 40px rgba(157, 78, 221, 0.5);
+    /* Premium primary color glows */
+    --glow-primary: 0 0 20px rgba(var(--color-primary-rgb), 0.4);
+    --glow-primary-lg: 0 0 40px rgba(var(--color-primary-rgb), 0.5);
     
     /* Elevated surfaces */
     --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.8), 
-                       0 0 1px rgba(157, 78, 221, 0.15);
+                       0 0 1px rgba(var(--color-primary-rgb), 0.15);
 }

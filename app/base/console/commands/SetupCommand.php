@@ -99,7 +99,10 @@ final class SetupCommand
         // Step 6: Clear caches (if any)
         $this->clearCaches();
 
-        // Step 7: Verify setup
+        // Step 7: Generate sitemap.xml
+        $this->generateSitemap();
+
+        // Step 8: Verify setup
         $this->verifySetup($isProduction && $hasProductionAssets);
 
         echo str_repeat('=', 50) . PHP_EOL;
@@ -341,6 +344,65 @@ final class SetupCommand
             } else {
                 unlink($filePath);
             }
+        }
+    }
+
+    /**
+     * Generate sitemap.xml for SEO
+     * 
+     * Creates a sitemap with all public pages for search engine indexing
+     */
+    private function generateSitemap(): void
+    {
+        echo "🗺️  Generating sitemap.xml..." . PHP_EOL;
+
+        $siteUrl = $this->getEnv('SITE_URL', '');
+        
+        if (empty($siteUrl)) {
+            echo "  ⚠️  SITE_URL not configured in .env - skipping sitemap generation" . PHP_EOL;
+            echo "     Set SITE_URL in .env to enable sitemap generation" . PHP_EOL;
+            return;
+        }
+
+        // Normalize URL (remove trailing slash)
+        $siteUrl = rtrim($siteUrl, '/');
+
+        // Define public pages to include in sitemap
+        // Priority: 1.0 = homepage, 0.8 = main pages, 0.5 = secondary pages
+        $pages = [
+            ['loc' => '/', 'priority' => '1.0', 'changefreq' => 'weekly'],
+            ['loc' => '/about', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['loc' => '/contact', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['loc' => '/privacy', 'priority' => '0.3', 'changefreq' => 'yearly'],
+        ];
+
+        // Get current date for lastmod
+        $lastmod = date('Y-m-d');
+
+        // Build XML
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
+        $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . PHP_EOL;
+
+        foreach ($pages as $page) {
+            $xml .= '  <url>' . PHP_EOL;
+            $xml .= '    <loc>' . htmlspecialchars($siteUrl . $page['loc'], ENT_XML1) . '</loc>' . PHP_EOL;
+            $xml .= '    <lastmod>' . $lastmod . '</lastmod>' . PHP_EOL;
+            $xml .= '    <changefreq>' . $page['changefreq'] . '</changefreq>' . PHP_EOL;
+            $xml .= '    <priority>' . $page['priority'] . '</priority>' . PHP_EOL;
+            $xml .= '  </url>' . PHP_EOL;
+        }
+
+        $xml .= '</urlset>' . PHP_EOL;
+
+        // Write to pub/sitemap.xml
+        $sitemapPath = __DIR__ . '/../../../../pub/sitemap.xml';
+        
+        if (file_put_contents($sitemapPath, $xml) !== false) {
+            echo "  ✓ Generated sitemap.xml with " . count($pages) . " URLs" . PHP_EOL;
+            echo "  ✓ Location: pub/sitemap.xml" . PHP_EOL;
+            echo "  ℹ️  Submit to Google Search Console: {$siteUrl}/sitemap.xml" . PHP_EOL;
+        } else {
+            echo "  ❌ Failed to write sitemap.xml" . PHP_EOL;
         }
     }
 }

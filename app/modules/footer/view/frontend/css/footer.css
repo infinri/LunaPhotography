@@ -7,7 +7,7 @@
 
 .main-footer {
     background: var(--color-bg-secondary);
-    border-top: 1px solid rgba(157, 78, 221, 0.2);
+    border-top: 1px solid rgba(var(--color-primary-rgb), 0.2);
     padding: 3rem 0 0.5rem;
 }
 
@@ -115,7 +115,7 @@
     padding-top: 2rem;
     padding-bottom: 1rem;
     margin-top: 2rem;
-    border-top: 1px solid rgba(157, 78, 221, 0.15);
+    border-top: 1px solid rgba(var(--color-primary-rgb), 0.15);
 }
 
 .footer-bottom-content {
