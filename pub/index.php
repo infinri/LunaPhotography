@@ -19,8 +19,9 @@ use App\Base\Helpers\Assets;
 $cspNonce = base64_encode(random_bytes(16));
 
 // Build CSP header with nonce (tightened security - reCAPTCHA v3 works without unsafe-inline/unsafe-eval)
-$cspHeader = "Content-Security-Policy: default-src 'self'; img-src 'self' data:; " .
-    "style-src 'self' 'nonce-" . $cspNonce . "'; " .
+$cspHeader = "Content-Security-Policy: default-src 'self'; img-src 'self' data: https://images.unsplash.com; " .
+    "style-src 'self' 'nonce-" . $cspNonce . "' https://fonts.googleapis.com; " .
+    "font-src 'self' https://fonts.gstatic.com; " .
     "script-src 'self' 'nonce-" . $cspNonce . "' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; " .
     "frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/ https://www.openstreetmap.org/; " .
     "connect-src 'self' https://www.google.com/recaptcha/; " .

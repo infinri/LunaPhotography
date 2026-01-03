@@ -207,7 +207,7 @@ final class Meta
             '@type' => 'Organization',
             'name' => $siteName,
             'url' => $siteUrl,
-            'logo' => $siteUrl . '/assets/base/images/logo.svg',
+            'logo' => $siteUrl . '/assets/base/images/logo.png',
             'description' => self::$tags['description'] ?? '',
             'founder' => [
                 '@type' => 'Person',

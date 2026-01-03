@@ -311,7 +311,7 @@ final class Assets
             $output .= '<link rel="preload" href="' . $allBundle . '" as="style">' . PHP_EOL;
             
             // Preload logo for instant LCP
-            $output .= '<link rel="preload" href="/assets/base/images/logo.svg" as="image" fetchpriority="high">' . PHP_EOL;
+            $output .= '<link rel="preload" href="/assets/base/images/logo.png" as="image" fetchpriority="high">' . PHP_EOL;
             
             // Load full stylesheet - critical CSS renders instantly, this completes the styling
             $output .= '<link rel="stylesheet" href="' . $allBundle . '">' . PHP_EOL;

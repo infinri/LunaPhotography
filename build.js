@@ -34,6 +34,7 @@ const config = {
     modules: [
         'home',
         'about',
+        'gallery',
         'services',
         'contact',
         'error',
