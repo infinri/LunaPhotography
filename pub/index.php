@@ -22,7 +22,7 @@ $cspNonce = base64_encode(random_bytes(16));
 $cspHeader = "Content-Security-Policy: default-src 'self'; img-src 'self' data:; " .
     "style-src 'self' 'nonce-" . $cspNonce . "'; " .
     "script-src 'self' 'nonce-" . $cspNonce . "' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; " .
-    "frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/; " .
+    "frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/ https://www.openstreetmap.org/; " .
     "connect-src 'self' https://www.google.com/recaptcha/; " .
     "base-uri 'self'; frame-ancestors 'none'; form-action 'self'";
 
@@ -100,6 +100,7 @@ $router = new Router();
 
 $router->get('/', 'home')
        ->get('/about', 'about')
+       ->get('/gallery', 'gallery')
        ->get('/contact', 'contact')
        ->get('/privacy', 'legal');
 

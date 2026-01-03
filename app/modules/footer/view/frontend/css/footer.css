@@ -1,14 +1,14 @@
 /**
  * Footer Module Styles
- * Modern footer with professional information and contact details
+ * Luna Photography - Photoshop-inspired minimal footer
  */
 
 /* ==================== Footer Container ==================== */
 
 .main-footer {
     background: var(--color-bg-secondary);
-    border-top: 1px solid rgba(var(--color-primary-rgb), 0.2);
-    padding: 3rem 0 0.5rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
 }
 
 .main-footer .container {
@@ -29,7 +29,6 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
-    margin-bottom: 2rem;
 }
 
 @media (min-width: 640px) {
@@ -71,19 +70,125 @@
     }
 }
 
-.footer-section h2 {
-    font-size: 1.125rem;
-    font-weight: 600;
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .footer-brand {
+        justify-content: flex-start;
+    }
+}
+
+.footer-brand span {
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--color-text);
-    letter-spacing: 0.025em;
-    margin-bottom: 1.25rem;
+}
+
+.footer-logo {
+    color: var(--color-text-light);
+}
+
+.footer-logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
 }
 
 .footer-section p {
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
     line-height: var(--line-height-relaxed);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section p a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-section p a:hover {
+    color: var(--color-primary-light);
+}
+
+.footer-section .hablamos-spanish {
+    color: var(--color-secondary);
+    margin-top: 0.5rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.social-link {
+    color: var(--color-text-muted);
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--color-primary-light);
+}
+
+/* ==================== Footer Social Links Section ==================== */
+
+.footer-social-section {
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .footer-social-section {
+        text-align: left;
+    }
+}
+
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.social-link-large {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    transition: color 0.2s ease;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .social-link-large {
+        justify-content: flex-start;
+    }
+}
+
+.social-link-large:hover {
+    color: var(--color-primary-light);
+}
+
+.social-link-large svg {
+    flex-shrink: 0;
 }
 
 /* ==================== Footer Navigation ==================== */
@@ -112,10 +217,9 @@
 /* ==================== Footer Bottom ==================== */
 
 .footer-bottom {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    margin-top: 2rem;
-    border-top: 1px solid rgba(var(--color-primary-rgb), 0.15);
+    padding-bottom: 0.5rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
 }
 
 .footer-bottom-content {

@@ -11,11 +11,11 @@ use App\Helpers\Env;
 
 // Set page-specific meta tags
 Meta::setMultiple([
-    'title' => 'Contact Us | Get in Touch',
-    'description' => 'Get in touch with us. Find our contact information including email, phone, location, and business hours.',
-    'og:title' => 'Contact Us | Get in Touch',
-    'og:description' => 'Get in touch with us. Find our contact information including email, phone, location, and business hours.',
-    'twitter:title' => 'Contact Us | Get in Touch'
+    'title' => 'Contact | Luna Photography & Video | DFW',
+    'description' => 'Contact Luna Photography & Video for photography and videography services in Dallas-Fort Worth. Email: luciosaldivar15a@gmail.com. Phone: (214) 714-1642.',
+    'og:title' => 'Contact | Luna Photography & Video',
+    'og:description' => 'Contact us for photography and videography in DFW. ¡Hablamos español!',
+    'twitter:title' => 'Contact | Luna Photography & Video'
 ]);
 
 // Load contact-specific assets (development only - production uses bundles)

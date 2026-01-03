@@ -3,6 +3,34 @@
  * ONLY classes that actually exist in templates
  */
 
+/* ==================== Base Section (Used on ALL pages) ==================== */
+
+.section {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 50%, var(--color-bg-primary) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Section with blue line separators (top and bottom) */
+.section--separated::before,
+.section--separated::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(var(--color-primary-rgb), 0.5), transparent);
+}
+
+.section--separated::before { top: 0; }
+.section--separated::after { bottom: 0; }
+
 /* ==================== Buttons (Used on ALL pages) ==================== */
 
 .btn {

@@ -3,14 +3,14 @@ declare(strict_types=1);
 /**
  * Header Template
  *
- * Pure HTML template for site header/navigation
+ * Luna Photography & Video - Navigation bar
  * Assets loaded in index.php
  */
 ?>
 <header class="header">
     <nav class="nav">
         <a href="/" class="logo">
-            <img src="/assets/base/images/logo.svg" alt="Infinri" class="logo-image" width="267" height="150" fetchpriority="high" decoding="sync">
+            <img src="/assets/base/images/logo.png" alt="Luna Photography & Video" class="logo-image">
         </a>
         
         <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
@@ -22,6 +22,7 @@ declare(strict_types=1);
             <ul class="nav-links">
                 <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/gallery" class="nav-link">Gallery</a></li>
                 <li><a href="/contact" class="nav-link">Contact</a></li>
             </ul>
         </div>

@@ -11,11 +11,11 @@ use App\Helpers\Env;
 
 // Set page-specific meta tags
 Meta::setMultiple([
-    'title' => 'About | Affordable Web Developer for Small Businesses | Infinri',
-    'description' => 'Affordable website development, hosting, and maintenance for small businesses. Websites from $10–$50, monthly support from $10/mo, fast delivery, transparent pricing.',
-    'og:title' => 'About | Affordable Web Developer for Small Businesses | Infinri',
-    'og:description' => 'Affordable website development for small businesses. Websites from $10, monthly support from $10/mo. Transparent pricing, fast delivery.',
-    'twitter:title' => 'About | Affordable Web Developer for Small Businesses | Infinri'
+    'title' => 'About | Luna Photography | Professional Photographer',
+    'description' => 'Learn about Luna Photography. Professional photography services specializing in portraits, landscapes, and commercial work. Capturing moments that matter.',
+    'og:title' => 'About | Luna Photography | Professional Photographer',
+    'og:description' => 'Professional photography services. Portraits, landscapes, and commercial work.',
+    'twitter:title' => 'About | Luna Photography'
 ]);
 
 // Load about-specific assets (development only - production uses bundles)

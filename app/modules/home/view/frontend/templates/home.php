@@ -1,89 +1,154 @@
 <?php
 declare(strict_types=1);
 /**
- * Infinri Homepage
+ * Luna Photography & Video - Homepage
  *
- * Personal web development studio for small businesses
- * Focus on practical, affordable web solutions
+ * Hero section with intro and call-to-action
+ * Family-owned DFW photography & videography business
  */
 ?>
 
-<section class="hero">
+<section class="section hero-section">
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">Affordable Websites for Real Businesses Starting at $10</h1>
-            <p class="hero-subtitle">Fast delivery, transparent pricing, no contracts, no tech jargon. Built for small businesses that need results without spending hundreds.</p>
+            <h1 class="hero-title">Welcome to Luna Photography,</h1>
+            
+            <p class="hero-intro">
+                <strong>For over 24 years, we've captured life's most cherished celebrations</strong>—from <strong>weddings and quinceañeras to milestone events</strong>—always with a <strong>personal, family-owned touch</strong>. Our professional photography and videography services cater to anyone seeking <strong>high-quality</strong> results with decades of expertise.
+            </p>
+            
+            <ul class="hero-features">
+                <li><span class="feature-icon">📸</span> <strong>Professional photography</strong> for portraits, weddings, and events</li>
+                <li><span class="feature-icon">🎬</span> <strong>Cinematic videography</strong> capturing your special moments</li>
+                <li><span class="feature-icon">💫</span> <strong>Personal, family-owned service</strong> with attention to every detail</li>
+            </ul>
+            
+            <p class="hero-cta-text">
+                <strong>Let us capture your story</strong>—contact us today for a consultation.
+            </p>
+            <p class="hablamos-spanish">¡Hablamos español!</p>
+            
             <div class="hero-buttons">
-                <a href="/contact" class="btn btn-white">Get Started</a>
-                <a href="/about" class="btn btn-outline-white">Learn More</a>
+                <a href="/gallery" class="btn btn-primary">View Our Work</a>
+                <a href="/contact" class="btn btn-outline">Get a Quote</a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="why-choose-section">
+<section class="section services-section">
     <div class="container">
-        <h2 class="section-title">Why Small Businesses Choose Infinri</h2>
-        <div class="why-choose-grid">
-            <div class="why-choose-item">
-                <svg class="why-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="12" y1="1" x2="12" y2="23"/>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                </svg>
-                <h3>Websites from $10</h3>
-                <p>Affordable pricing that actually makes sense for small budgets</p>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Weddings, birthdays, graduations, or business events — it doesn’t matter.
+            Our pricing is based entirely on your package, not your event type.
+            Photos, videos, hours, materials, and formats are what determine cost.
+            <br><br>Fair pricing. No “wedding tax.”
+        </p>
+        
+        <div class="services-grid">
+            <a href="/contact" class="service-card">
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                        <circle cx="12" cy="13" r="4"/>
+                    </svg>
+                </div>
+                <h3>Photography Only</h3>
+                <p>Need just photos? Custom photo-only packages available upon request. Contact us to discuss your specific needs.</p>
+            </a>
+            
+            <a href="/contact" class="service-card service-card-featured">
+                <span class="service-badge">Most Popular</span>
+                <div class="service-icon">
+                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <path d="M3 9h18"/>
+                        <path d="M9 21V9"/>
+                    </svg>
+                </div>
+                <h3>Bundle Packages</h3>
+                <p>Photo + video coverage with prints, albums, and USB delivery. Multiple tiers available based on print sizes, quantities, and coverage time. <strong>Contact us for package details!</strong></p>
+            </a>
+            
+            <a href="/contact" class="service-card">
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polygon points="23 7 16 12 23 17 23 7"/>
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                    </svg>
+                </div>
+                <h3>Videography Only</h3>
+                <p>Need just video? Custom video-only packages available upon request. Contact us to discuss your specific needs.</p>
+            </a>
+            
+        </div>
+        
+        <p class="services-note">Every event is unique—<a href="/contact">contact us</a> for a personalized quote based on your specific needs.</p>
+    </div>
+</section>
+
+<section class="section section--separated capture-section">
+    <div class="container">
+        <div class="capture-header">
+            <h2 class="section-title">Capture Life's Moments</h2>
+            <p class="section-subtitle">At Luna Photography, we don't just take photos—we capture emotions, smiles, and those unique moments that tell your story.</p>
+        </div>
+        
+        <div class="event-slider">
+            <div class="event-slider-track">
+                <a href="/gallery#weddings" class="event-slide">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop" alt="Wedding Photography" class="event-slide-image">
+                    <div class="event-slide-overlay">
+                        <h3 class="event-slide-title">Weddings</h3>
+                    </div>
+                </a>
+                
+                <a href="/gallery#quinceaneras" class="event-slide">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop" alt="Quinceañera Photography" class="event-slide-image">
+                    <div class="event-slide-overlay">
+                        <h3 class="event-slide-title">Quinceañeras</h3>
+                    </div>
+                </a>
+                
+                <a href="/gallery#graduations" class="event-slide">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop" alt="Graduation Photography" class="event-slide-image">
+                    <div class="event-slide-overlay">
+                        <h3 class="event-slide-title">Graduations</h3>
+                    </div>
+                </a>
+                
+                <a href="/gallery#birthdays" class="event-slide">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=400&fit=crop" alt="Birthday Photography" class="event-slide-image">
+                    <div class="event-slide-overlay">
+                        <h3 class="event-slide-title">Birthdays</h3>
+                    </div>
+                </a>
+                
+                <a href="/gallery#corporate" class="event-slide">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop" alt="Corporate Event Photography" class="event-slide-image">
+                    <div class="event-slide-overlay">
+                        <h3 class="event-slide-title">Corporate Events</h3>
+                    </div>
+                </a>
             </div>
-            <div class="why-choose-item">
-                <svg class="why-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                </svg>
-                <h3>Fast Delivery Based on Complexity</h3>
-                <p>Basic templates typically 1-3 days, more complex sites take longer</p>
-            </div>
-            <div class="why-choose-item">
-                <svg class="why-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <polyline points="22 4 12 14.01 9 11.01"/>
-                </svg>
-                <h3>No Contracts</h3>
-                <p>Pay for what you need, cancel anytime, no strings attached</p>
-            </div>
-            <div class="why-choose-item">
-                <svg class="why-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <line x1="12" y1="8" x2="12" y2="12"/>
-                    <line x1="12" y1="16" x2="12.01" y2="16"/>
-                </svg>
-                <h3>No Surprises</h3>
-                <p>Clear pricing upfront, no hidden fees or unexpected charges</p>
-            </div>
-            <div class="why-choose-item">
-                <svg class="why-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-                <h3>You Work Directly With Me</h3>
-                <p>No account managers, no runaround just direct communication</p>
-            </div>
-            <div class="why-choose-item">
-                <svg class="why-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                </svg>
-                <h3>Real Communication</h3>
-                <p>I actually answer emails and respond to your questions</p>
-            </div>
+        </div>
+        
+        <div class="capture-footer">
+            <p class="capture-text">Because every important moment deserves to be remembered in the best way possible—trust us to make your moments unforgettable!</p>
+            <a href="/gallery" class="btn btn-primary">View All Our Work</a>
         </div>
     </div>
 </section>
 
-<section class="cta-section">
+<section class="section section--separated cta-section">
     <div class="container">
         <div class="cta-content">
-            <h2>Ready to Get Started?</h2>
-            <p>Delivery time depends on complexity—basic templates typically 1-3 days. Fixes usually within 24 hours. Monthly support starting at $10. Let's build something that actually works for your business.</p>
-            <a href="/contact" class="btn btn-white btn-large">Start Your Project</a>
+            <h2>Ready to Capture Your Story?</h2>
+            <p>Contact us today for a free consultation. Services available throughout the DFW metroplex.</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="btn btn-primary btn-lg">Get Started</a>
+                <a href="tel:+12147141642" class="btn btn-outline">Call (214) 714-1642</a>
+            </div>
         </div>
     </div>
 </section>

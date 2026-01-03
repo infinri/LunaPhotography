@@ -3,7 +3,7 @@ declare(strict_types=1);
 /**
  * Home Module Controller
  *
- * Loads home page template and assets
+ * Luna Photography portfolio homepage
  */
 
 use App\Base\Helpers\{Meta, Assets};
@@ -11,11 +11,11 @@ use App\Helpers\Env;
 
 // Set page-specific meta tags
 Meta::setMultiple([
-    'title' => 'Infinri | Affordable Websites for Small Businesses Starting at $10',
-    'description' => 'Affordable website development starting at $10. Template sites in 24-48 hours, monthly support from $10/mo. No contracts, no tech jargon, transparent pricing.',
-    'og:title' => 'Infinri | Affordable Websites for Small Businesses Starting at $10',
-    'og:description' => 'Websites starting at $10. Template sites in 24-48 hours. Monthly support from $10/mo. No contracts, transparent pricing.',
-    'twitter:title' => 'Infinri | Affordable Websites for Small Businesses Starting at $10'
+    'title' => 'Luna Photography & Video | DFW Photography & Videography Services',
+    'description' => 'A family-owned Texas business offering high-quality photography and videography services in the Dallas-Fort Worth Metroplex. On-site services in DFW, editing services nationwide. ¡Hablamos español!',
+    'og:title' => 'Luna Photography & Video | DFW Photography & Videography',
+    'og:description' => 'Family-owned photography and videography in Dallas-Fort Worth. On-site services in DFW, editing nationwide.',
+    'twitter:title' => 'Luna Photography & Video | DFW'
 ]);
 
 // Load home-specific assets (development only - production uses bundles)
