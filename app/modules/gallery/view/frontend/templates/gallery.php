@@ -159,10 +159,6 @@ declare(strict_types=1);
         <div class="lightbox-main">
             <img class="lightbox-image" src="" alt="">
             <div class="lightbox-loader"></div>
-            <button class="lightbox-zoom" aria-label="Toggle zoom">🔍</button>
-            <div class="zoom-hint">
-                <span>Click or pinch to zoom • Drag to explore</span>
-            </div>
         </div>
         <button class="lightbox-nav lightbox-nav--next" aria-label="Next image">›</button>
     </div>

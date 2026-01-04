@@ -22,14 +22,16 @@ const config = {
         'base/css/theme.css',        // Customer theme overrides
         'base/css/base.css',
         // Frontend CSS
-        'frontend/css/theme.css'
+        'frontend/css/theme.css',
+        'frontend/css/slider.css'
     ],
     criticalCss: 'base/css/critical.css', // Inlined separately
     jsFiles: [
         // Base JS
         'base/js/base.js',
         // Frontend JS
-        'frontend/js/theme.js'
+        'frontend/js/theme.js',
+        'frontend/js/slider.js'
     ],
     modules: [
         'home',
@@ -134,8 +136,8 @@ async function minifyJavaScript(files, outputName) {
         const result = await minifyJS(combinedJS, {
             compress: {
                 dead_code: true,
-                drop_console: true,
-                drop_debugger: true,
+                drop_console: false,
+                drop_debugger: false,
                 conditionals: true,
                 evaluate: true,
                 booleans: true,

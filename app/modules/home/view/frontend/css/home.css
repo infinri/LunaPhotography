@@ -292,31 +292,9 @@
     margin-bottom: 3rem;
 }
 
-/* Event Slider */
-.event-slider {
-    position: relative;
-    margin: 0 -1rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding: 1rem 0;
-}
-
-.event-slider::-webkit-scrollbar {
-    display: none;
-}
-
-.event-slider-track {
-    display: flex;
-    gap: 1.5rem;
-    padding: 0 1rem;
-}
-
+/* Event Slides - content styling only (slider mechanics in slider.css) */
 .event-slide {
     flex: 0 0 280px;
-    scroll-snap-align: center;
     position: relative;
     border-radius: 16px;
     overflow: hidden;
@@ -329,14 +307,6 @@
     .event-slide {
         flex: 0 0 calc(20% - 1.2rem);
         min-width: 220px;
-    }
-    
-    .event-slider {
-        overflow: visible;
-    }
-    
-    .event-slider-track {
-        justify-content: center;
     }
 }
 

@@ -22,10 +22,15 @@ Meta::setMultiple([
 if (Env::get('APP_ENV', 'development') !== 'production') {
     $modulePath = __DIR__;
     $assetBase = '/assets/modules/home/view/frontend';
+    $baseAssetPath = '/assets/base/view/frontend';
 
     if (file_exists("{$modulePath}/view/frontend/css/home.css")) {
         Assets::addCss("{$assetBase}/css/home.css");
     }
+
+    // Load global slider module (needed for homepage slider)
+    Assets::addCss("{$baseAssetPath}/css/slider.css", 'frontend');
+    Assets::addJs("{$baseAssetPath}/js/slider.js", 'frontend');
 
     if (file_exists("{$modulePath}/view/frontend/js/home.js")) {
         Assets::addJs("{$assetBase}/js/home.js");

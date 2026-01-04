@@ -94,8 +94,14 @@ declare(strict_types=1);
             <p class="section-subtitle">At Luna Photography, we don't just take photos—we capture emotions, smiles, and those unique moments that tell your story.</p>
         </div>
         
-        <div class="event-slider">
-            <div class="event-slider-track">
+        <div class="slider-container">
+            <button class="slider-btn slider-btn--prev" aria-label="Previous">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            
+            <div class="slider-track">
                 <a href="/gallery#weddings" class="event-slide">
                     <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop" alt="Wedding Photography" class="event-slide-image">
                     <div class="event-slide-overlay">
@@ -131,6 +137,12 @@ declare(strict_types=1);
                     </div>
                 </a>
             </div>
+            
+            <button class="slider-btn slider-btn--next" aria-label="Next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
         </div>
         
         <div class="capture-footer">
